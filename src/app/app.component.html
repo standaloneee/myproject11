@@ -4,7 +4,7 @@
         <p><textarea name="maintext" id="1" class="maintext" [(ngModel)]="maintext"></textarea></p>
         <input type="button" value="Добавить" (click)="pushtext()">
     </form>
-    <div *ngFor="let number of notes; let i = index">
+    <div *ngFor="let number of notes; let i = index" class="card">
         <p>{{notes[i].id}}.{{notes[i].name}}</p>
         <p>{{notes[i].maintext}}</p>
         <p>{{notes[i].date|date:'dd.MM.yyyy hh:mm:ss a'}}</p>

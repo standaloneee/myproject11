@@ -6,3 +6,9 @@
     width: 300px;
     height: 300px;
 }
+
+.card {
+    border: 1px black solid;
+    /* можно ширину поменьше сделать, но я думаю так лучше выглядит */
+    width: auto;
+}
