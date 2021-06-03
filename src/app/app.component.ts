@@ -9,18 +9,21 @@ import { Note } from './interface';
 })
 export class AppComponent {
   title = 'project11';
-  article = '';
-  maintext = '';
+  // article = '';
+  // maintext = '';
   notes: Note[]=[];
-  idnumber = 1;
-
-  pushtext() {
+  // idnumber = 1;
   
-    let note: Note = { id: this.idnumber++, name: this.article, maintext: this.maintext, date: new Date() }
-    this.notes.push(note);
+  onAddNote(e: Note) {
+  
+    
+   this.notes.push(e);
     console.log(this.notes);
   }
-  delete(index:number) {
+  onDeleteNote(index:number) {
     this.notes.splice(index,1);
+  }
+  onEditNote(){
+    console.log(this.notes);
   }
 }

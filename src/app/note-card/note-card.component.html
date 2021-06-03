@@ -1,0 +1,14 @@
+<div class="container" *ngIf="condition">
+
+    <p>{{inputNote.id}}.{{inputNote.name}}</p>
+    <p>{{inputNote.maintext}}</p>
+    <p>{{inputNote.date|date:'dd.MM.yyyy HH:mm:ss'}}</p>
+    <input type="button" value="Удалить" (click)="onDeleteNote()">
+
+</div>
+<div *ngIf="!condition">
+    <p> <input type="text" name="notetitle" [(ngModel)]="inputNote.name"></p>
+    <p> <textarea type="text" name="notetitle" [(ngModel)]="inputNote.maintext"></textarea></p>
+    <p [(ngModel)]="inputNote.date"></p>
+    <p><input type="button" value="Сохранить" (click)="onEditNote()"></p>
+</div>
