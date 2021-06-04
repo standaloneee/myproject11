@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
-import { timeStamp } from 'console';
+// import { timeStamp } from 'console';
 import { Note } from '../interface';
+import { NoteCardComponent } from '../note-card/note-card.component';
 
 @Component({
   selector: 'app-note-form',
@@ -12,7 +13,9 @@ export class NoteFormComponent implements OnInit {
 
 article: string = ''; 
 maintext: string = '';
-idnumber: 1 = 1;
+idnumber: number = 1;
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -20,7 +23,7 @@ idnumber: 1 = 1;
   onAddNote(){
     this.noteAdd.emit({id: this.idnumber++, name: this.article, maintext: this.maintext, date: new Date()})
     this.article='';
-    this.maintext='';
+    this.maintext='';    
   }
 
 }

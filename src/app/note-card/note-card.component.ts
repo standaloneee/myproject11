@@ -7,21 +7,26 @@ import { Note } from '../interface';
   styleUrls: ['./note-card.component.css']
 })
 export class NoteCardComponent implements OnInit {
-  @Input() inputNote!: Note; //???????????????????
+ 
+  @Input() inputNote!: Note;
   @Output() noteDelete = new EventEmitter<Note>();
   @Output() noteEdit = new EventEmitter<Note>();
-  condition = false;
+  @Output() noteAdd = new EventEmitter<Note>();
+  condition = true;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-onDeleteNote(){
-  this.noteDelete.emit();
-}
-onEditNote(){
-  this.condition = !this.condition;
-  if(this.condition==false)
-  this.noteEdit.emit();
-}
+  onDeleteNote() {
+    this.noteDelete.emit();
+  }
+  onEditNote() {
+    this.condition = !this.condition;
+    // if (this.condition == false)
+    // {
+    //   // this.noteAdd.emit();
+    // }
+     
+  }
 }

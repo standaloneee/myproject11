@@ -1,3 +1,4 @@
 <app-note-form (noteAdd)="onAddNote($event)"></app-note-form>
-<app-note-card *ngFor="let note of notes; let i = index" [inputNote]="note" (noteDelete)="onDeleteNote(i)" (noteEdit)="onEditNote()">
-</app-note-card>
+<div class="wrap">
+    <app-note-card class="card-main" *ngFor="let note of notes; let i = index" [inputNote]="note" (noteDelete)="onDeleteNote(i)" (noteEdit)="onEditNote()"></app-note-card>
+</div>
