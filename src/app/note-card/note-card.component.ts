@@ -22,11 +22,27 @@ export class NoteCardComponent implements OnInit {
     this.noteDelete.emit();
   }
   onEditNote() {
+    if(this.inputNote.name == "" || this.inputNote.maintext == ""){
+
+    }
+    else{
     this.condition = !this.condition;
-    // if (this.condition == false)
-    // {
-    //   // this.noteAdd.emit();
-    // }
-     
+    if (this.condition == true)
+    {
+      // this.noteAdd.emit();
+      if(this.inputNote.name == ""){
+        console.log("it's empty name")
+        this.inputNote.name = "name is empty";
+             }
+            
+             if(this.inputNote.maintext == ""){
+        console.log("it's empty maintext")
+        this.inputNote.maintext = "maintext is empty";
+             }
+          }
+    }
   }
+    
+    
+    
 }

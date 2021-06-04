@@ -10,7 +10,7 @@
     </div>
     <div class="card" *ngIf="!condition" >
         <p> <input type="text" name="notetitle" [(ngModel)]="inputNote.name"></p>
-        <p> <textarea type="text" name="notetitle" [(ngModel)]="inputNote.maintext"></textarea></p>
+        <p> <textarea type="text" name="maintext" [(ngModel)]="inputNote.maintext"></textarea></p>
         <!-- <p [(ngModel)]="inputNote.date"></p> -->
         <p></p>
         <input type="button" value="Сохранить" (click)="onEditNote()">

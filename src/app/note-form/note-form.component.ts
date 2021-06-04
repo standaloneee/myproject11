@@ -21,9 +21,14 @@ idnumber: number = 1;
   ngOnInit(): void {
   }
   onAddNote(){
+    if(this.article == "" || this.maintext == ""){
+
+    }
+    else{
     this.noteAdd.emit({id: this.idnumber++, name: this.article, maintext: this.maintext, date: new Date()})
     this.article='';
-    this.maintext='';    
+    this.maintext='';  
+    }  
   }
 
 }
